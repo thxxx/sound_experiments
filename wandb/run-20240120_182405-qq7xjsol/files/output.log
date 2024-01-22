@@ -1,0 +1,82 @@
+/usr/local/lib/python3.10/dist-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+  0%|          | 0/10000 [00:00<?, ?it/s]
+  0%|          | 0/10000 [00:00<?, ?it/s]ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5701:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5701:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpt0vunmn1.wav' or configure filtergraph
+duration: 43.691 seconds
+batch_size: 1
+path: /tmp/tmpt0vunmn1.wav
+sample_rate: 44100
+num_channels: 2
+audio_data.shape: torch.Size([1, 2, 1926758])
+stft_params: STFTParams(window_length=2048, hop_length=512, window_type='hann', match_stride=False, padding_type='reflect')
+device: cpu
+duration: 3.000 seconds
+batch_size: 1
+path: /tmp/tmpb05b__qf.wav
+sample_rate: 16000
+num_channels: 1
+audio_data.shape: torch.Size([1, 1, 48000])
+stft_params: STFTParams(window_length=2048, hop_length=512, window_type='hann', match_stride=False, padding_type='reflect')
+device: cpu
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5701:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpb05b__qf.wav' or configure filtergraph
+torch.Size([1, 4, 150])
+torch.Size([1, 4, 150])
+torch.Size([1, 4, 150])
+3.0
+3.1893197278911565
+18.88
+6.869319727891156
+2.815986394557823
+2.815986394557823
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+2.815986394557823
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+2.815986394557823
+2.815986394557823
+2.815986394557823
+2.815986394557823
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+2.815986394557823
+2.815986394557823
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+2.815986394557823
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])
+torch.Size([1, 4, 141])

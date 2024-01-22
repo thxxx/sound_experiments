@@ -1,0 +1,206 @@
+2024-01-21 06:41:11,433 INFO    StreamThr :31457 [internal.py:wandb_internal():86] W&B internal server running at pid: 31457, started at: 2024-01-21 06:41:11.433111
+2024-01-21 06:41:11,436 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status
+2024-01-21 06:41:11,441 INFO    WriterThread:31457 [datastore.py:open_for_write():87] open: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/run-97uyy6h0.wandb
+2024-01-21 06:41:11,441 DEBUG   SenderThread:31457 [sender.py:send():382] send: header
+2024-01-21 06:41:11,449 DEBUG   SenderThread:31457 [sender.py:send():382] send: run
+2024-01-21 06:41:11,773 INFO    SenderThread:31457 [dir_watcher.py:__init__():211] watching files in: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files
+2024-01-21 06:41:11,774 INFO    SenderThread:31457 [sender.py:_start_run_threads():1136] run started: 97uyy6h0 with start time 1705819271.432435
+2024-01-21 06:41:11,778 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: check_version
+2024-01-21 06:41:11,779 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: check_version
+2024-01-21 06:41:11,893 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: run_start
+2024-01-21 06:41:11,924 DEBUG   HandlerThread:31457 [system_info.py:__init__():27] System info init
+2024-01-21 06:41:11,924 DEBUG   HandlerThread:31457 [system_info.py:__init__():42] System info init done
+2024-01-21 06:41:11,924 INFO    HandlerThread:31457 [system_monitor.py:start():194] Starting system monitor
+2024-01-21 06:41:11,925 INFO    SystemMonitor:31457 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-21 06:41:11,925 INFO    HandlerThread:31457 [system_monitor.py:probe():214] Collecting system info
+2024-01-21 06:41:11,926 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started cpu monitoring
+2024-01-21 06:41:11,926 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started disk monitoring
+2024-01-21 06:41:11,927 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started gpu monitoring
+2024-01-21 06:41:11,928 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started memory monitoring
+2024-01-21 06:41:11,928 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started network monitoring
+2024-01-21 06:41:12,007 DEBUG   HandlerThread:31457 [system_info.py:probe():151] Probing system
+2024-01-21 06:41:12,014 DEBUG   HandlerThread:31457 [system_info.py:_probe_git():136] Probing git
+2024-01-21 06:41:12,025 DEBUG   HandlerThread:31457 [system_info.py:_probe_git():144] Probing git done
+2024-01-21 06:41:12,025 DEBUG   HandlerThread:31457 [system_info.py:probe():199] Probing system done
+2024-01-21 06:41:12,025 DEBUG   HandlerThread:31457 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-89-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-01-21T06:41:12.007318', 'startedAt': '2024-01-21T06:41:11.424668', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'workspace/audiogen-finetune/train_custom.ipynb', 'codePathLocal': None, 'root': '/workspace/audiogen-finetune', 'git': {'remote': 'https://github.com/OptimizerAI/audiogen-finetune', 'commit': 'b82e0472cf29a4f7065288361c3cd901a743202e'}, 'email': None, 'host': 'db263c89cef8', 'username': 'root', 'executable': '/usr/bin/python', 'cpu_count': 128, 'cpu_count_logical': 255, 'cpu_freq': {'current': 2435.627019607843, 'min': 1500.0, 'max': 2450.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2000.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2000.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2000.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3098.387, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2000.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3096.327, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3092.038, 'min': 1500.0, 'max': 2450.0}, {'current': 3091.221, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3094.256, 'min': 1500.0, 'max': 2450.0}, {'current': 3092.992, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3091.905, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3083.531, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3064.996, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3100.101, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3094.342, 'min': 1500.0, 'max': 2450.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3099.672, 'min': 1500.0, 'max': 2450.0}, {'current': 3100.1, 'min': 1500.0, 'max': 2450.0}, {'current': 3076.248, 'min': 1500.0, 'max': 2450.0}, {'current': 3074.822, 'min': 1500.0, 'max': 2450.0}, {'current': 3075.957, 'min': 1500.0, 'max': 2450.0}, {'current': 3075.926, 'min': 1500.0, 'max': 2450.0}, {'current': 3099.946, 'min': 1500.0, 'max': 2450.0}, {'current': 3075.82, 'min': 1500.0, 'max': 2450.0}, {'current': 3095.724, 'min': 1500.0, 'max': 2450.0}, {'current': 3070.243, 'min': 1500.0, 'max': 2450.0}, {'current': 3094.729, 'min': 1500.0, 'max': 2450.0}, {'current': 3099.79, 'min': 1500.0, 'max': 2450.0}, {'current': 3099.857, 'min': 1500.0, 'max': 2450.0}, {'current': 3094.796, 'min': 1500.0, 'max': 2450.0}, {'current': 3093.79, 'min': 1500.0, 'max': 2450.0}, {'current': 3092.829, 'min': 1500.0, 'max': 2450.0}, {'current': 3092.792, 'min': 1500.0, 'max': 2450.0}, {'current': 3079.479, 'min': 1500.0, 'max': 2450.0}, {'current': 3051.998, 'min': 1500.0, 'max': 2450.0}, {'current': 3051.638, 'min': 1500.0, 'max': 2450.0}, {'current': 3051.482, 'min': 1500.0, 'max': 2450.0}, {'current': 3056.928, 'min': 1500.0, 'max': 2450.0}, {'current': 3052.194, 'min': 1500.0, 'max': 2450.0}, {'current': 3064.688, 'min': 1500.0, 'max': 2450.0}, {'current': 3056.191, 'min': 1500.0, 'max': 2450.0}, {'current': 3056.308, 'min': 1500.0, 'max': 2450.0}, {'current': 3087.477, 'min': 1500.0, 'max': 2450.0}, {'current': 3086.527, 'min': 1500.0, 'max': 2450.0}, {'current': 3086.407, 'min': 1500.0, 'max': 2450.0}, {'current': 3084.039, 'min': 1500.0, 'max': 2450.0}, {'current': 2439.609, 'min': 1500.0, 'max': 2450.0}, {'current': 3084.375, 'min': 1500.0, 'max': 2450.0}, {'current': 3085.22, 'min': 1500.0, 'max': 2450.0}, {'current': 3099.571, 'min': 1500.0, 'max': 2450.0}, {'current': 3081.77, 'min': 1500.0, 'max': 2450.0}, {'current': 3081.391, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.697, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.128, 'min': 1500.0, 'max': 2450.0}, {'current': 3066.632, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.765, 'min': 1500.0, 'max': 2450.0}, {'current': 3081.929, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.343, 'min': 1500.0, 'max': 2450.0}, {'current': 3059.304, 'min': 1500.0, 'max': 2450.0}, {'current': 3058.588, 'min': 1500.0, 'max': 2450.0}, {'current': 3057.729, 'min': 1500.0, 'max': 2450.0}, {'current': 3058.272, 'min': 1500.0, 'max': 2450.0}, {'current': 3059.369, 'min': 1500.0, 'max': 2450.0}, {'current': 3057.854, 'min': 1500.0, 'max': 2450.0}, {'current': 3059.16, 'min': 1500.0, 'max': 2450.0}, {'current': 3058.621, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.266, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.275, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.328, 'min': 1500.0, 'max': 2450.0}, {'current': 3080.909, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.104, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.208, 'min': 1500.0, 'max': 2450.0}, {'current': 3083.676, 'min': 1500.0, 'max': 2450.0}, {'current': 3082.298, 'min': 1500.0, 'max': 2450.0}, {'current': 3085.003, 'min': 1500.0, 'max': 2450.0}, {'current': 3058.494, 'min': 1500.0, 'max': 2450.0}, {'current': 3083.111, 'min': 1500.0, 'max': 2450.0}, {'current': 3062.128, 'min': 1500.0, 'max': 2450.0}, {'current': 3069.948, 'min': 1500.0, 'max': 2450.0}, {'current': 3084.132, 'min': 1500.0, 'max': 2450.0}, {'current': 3084.042, 'min': 1500.0, 'max': 2450.0}, {'current': 3084.473, 'min': 1500.0, 'max': 2450.0}, {'current': 3099.732, 'min': 1500.0, 'max': 2450.0}, {'current': 3081.163, 'min': 1500.0, 'max': 2450.0}, {'current': 3074.292, 'min': 1500.0, 'max': 2450.0}, {'current': 3083.994, 'min': 1500.0, 'max': 2450.0}, {'current': 3083.594, 'min': 1500.0, 'max': 2450.0}, {'current': 3085.022, 'min': 1500.0, 'max': 2450.0}, {'current': 3083.196, 'min': 1500.0, 'max': 2450.0}], 'disk': {'/': {'total': 100.0, 'used': 27.791580200195312}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 2003.9212265014648}}
+2024-01-21 06:41:12,026 INFO    HandlerThread:31457 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-21 06:41:12,026 INFO    HandlerThread:31457 [system_monitor.py:probe():227] Publishing system info
+2024-01-21 06:41:12,028 INFO    HandlerThread:31457 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-21 06:41:12,035 DEBUG   SenderThread:31457 [sender.py:send():382] send: files
+2024-01-21 06:41:12,035 INFO    SenderThread:31457 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-01-21 06:41:12,049 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: python_packages
+2024-01-21 06:41:12,049 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: python_packages
+2024-01-21 06:41:12,052 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:41:12,052 DEBUG   SenderThread:31457 [sender.py:send():382] send: telemetry
+2024-01-21 06:41:12,052 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:41:12,055 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:41:12,406 INFO    wandb-upload_0:31457 [upload_job.py:push():131] Uploaded file /tmp/tmpdl_jpydawandb/pbdxv4qe-wandb-metadata.json
+2024-01-21 06:41:12,775 INFO    Thread-12 :31457 [dir_watcher.py:_on_file_created():271] file/dir created: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/requirements.txt
+2024-01-21 06:41:12,776 INFO    Thread-12 :31457 [dir_watcher.py:_on_file_created():271] file/dir created: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/output.log
+2024-01-21 06:41:12,792 INFO    Thread-12 :31457 [dir_watcher.py:_on_file_created():271] file/dir created: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/wandb-metadata.json
+2024-01-21 06:41:14,796 INFO    Thread-12 :31457 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/output.log
+2024-01-21 06:41:16,693 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:21,700 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:26,703 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:27,051 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:41:27,093 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:41:27,100 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:41:32,305 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:37,311 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:42,051 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:41:42,093 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:41:42,099 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:41:43,294 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:44,904 INFO    Thread-12 :31457 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/config.yaml
+2024-01-21 06:41:49,704 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:51,228 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: pause
+2024-01-21 06:41:51,228 INFO    HandlerThread:31457 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-01-21 06:41:51,228 INFO    HandlerThread:31457 [system_monitor.py:finish():203] Stopping system monitor
+2024-01-21 06:41:51,229 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-21 06:41:51,230 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-21 06:41:51,230 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-21 06:41:51,230 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined disk monitor
+2024-01-21 06:41:51,231 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-21 06:41:51,244 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-21 06:41:51,244 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined memory monitor
+2024-01-21 06:41:51,244 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined network monitor
+2024-01-21 06:41:51,245 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: resume
+2024-01-21 06:41:51,245 INFO    HandlerThread:31457 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-01-21 06:41:51,245 INFO    HandlerThread:31457 [system_monitor.py:start():194] Starting system monitor
+2024-01-21 06:41:51,245 INFO    SystemMonitor:31457 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-21 06:41:51,246 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started cpu monitoring
+2024-01-21 06:41:51,247 DEBUG   SenderThread:31457 [sender.py:send():382] send: stats
+2024-01-21 06:41:51,247 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started disk monitoring
+2024-01-21 06:41:51,253 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started gpu monitoring
+2024-01-21 06:41:51,253 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started memory monitoring
+2024-01-21 06:41:51,258 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started network monitoring
+2024-01-21 06:41:53,370 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: pause
+2024-01-21 06:41:53,370 INFO    HandlerThread:31457 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-01-21 06:41:53,370 INFO    HandlerThread:31457 [system_monitor.py:finish():203] Stopping system monitor
+2024-01-21 06:41:53,370 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-21 06:41:53,371 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-21 06:41:53,371 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-21 06:41:53,372 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined disk monitor
+2024-01-21 06:41:53,372 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-21 06:41:53,386 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-21 06:41:53,386 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined memory monitor
+2024-01-21 06:41:53,386 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined network monitor
+2024-01-21 06:41:53,386 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: resume
+2024-01-21 06:41:53,386 INFO    HandlerThread:31457 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-01-21 06:41:53,386 INFO    HandlerThread:31457 [system_monitor.py:start():194] Starting system monitor
+2024-01-21 06:41:53,387 INFO    SystemMonitor:31457 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-21 06:41:53,388 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started cpu monitoring
+2024-01-21 06:41:53,388 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started disk monitoring
+2024-01-21 06:41:53,389 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started gpu monitoring
+2024-01-21 06:41:53,389 DEBUG   SenderThread:31457 [sender.py:send():382] send: stats
+2024-01-21 06:41:53,399 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started memory monitoring
+2024-01-21 06:41:53,400 INFO    SystemMonitor:31457 [interfaces.py:start():190] Started network monitoring
+2024-01-21 06:41:53,908 INFO    Thread-12 :31457 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/output.log
+2024-01-21 06:41:54,908 INFO    Thread-12 :31457 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/output.log
+2024-01-21 06:41:55,391 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:41:55,734 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: pause
+2024-01-21 06:41:55,734 INFO    HandlerThread:31457 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-01-21 06:41:55,734 INFO    HandlerThread:31457 [system_monitor.py:finish():203] Stopping system monitor
+2024-01-21 06:41:55,735 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-21 06:41:55,735 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-21 06:41:55,736 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined disk monitor
+2024-01-21 06:41:55,736 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-21 06:41:55,736 DEBUG   SystemMonitor:31457 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-21 06:41:55,753 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-21 06:41:55,753 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined memory monitor
+2024-01-21 06:41:55,753 INFO    HandlerThread:31457 [interfaces.py:finish():202] Joined network monitor
+2024-01-21 06:41:55,754 DEBUG   SenderThread:31457 [sender.py:send():382] send: stats
+2024-01-21 06:41:57,050 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:41:57,051 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:41:57,093 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:42:01,204 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:06,205 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:11,206 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:12,050 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:42:12,051 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:42:12,093 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:42:17,163 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:22,164 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:27,051 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:42:27,051 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:42:27,093 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:42:28,135 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:33,136 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:38,137 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:42,051 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:42:42,052 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:42:42,093 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:42:43,192 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:48,193 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:53,193 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:42:57,051 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:42:57,052 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:42:57,093 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:42:58,204 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:03,205 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:08,205 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:12,051 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:43:12,052 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:43:12,094 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:43:15,553 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:20,554 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:25,555 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:27,051 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:43:27,052 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:43:27,094 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:43:31,198 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:36,199 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:41,199 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:42,052 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:43:42,052 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:43:42,094 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:43:46,232 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:51,233 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:56,234 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:43:57,052 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:43:57,052 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:43:57,094 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:44:02,155 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:07,156 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:12,052 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:44:12,053 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:44:12,094 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:44:12,219 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:17,220 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:22,221 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:27,052 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:44:27,053 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:44:27,094 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:44:28,215 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:33,216 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:38,217 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:42,052 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:44:42,053 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:44:42,094 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:44:44,140 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:49,141 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:54,142 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:44:57,053 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-21 06:44:57,053 DEBUG   SenderThread:31457 [sender.py:send_request():409] send_request: stop_status
+2024-01-21 06:44:57,100 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-21 06:44:59,197 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:45:04,198 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:45:09,199 DEBUG   HandlerThread:31457 [handler.py:handle_request():146] handle_request: status_report
+2024-01-21 06:45:13,114 WARNING StreamThr :31457 [internal.py:is_dead():414] Internal process exiting, parent pid 31307 disappeared
+2024-01-21 06:45:13,114 ERROR   StreamThr :31457 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-01-21 06:45:13,200 INFO    SenderThread:31457 [sender.py:finish():1572] shutting down sender
+2024-01-21 06:45:13,208 INFO    HandlerThread:31457 [handler.py:finish():869] shutting down handler
+2024-01-21 06:45:13,212 INFO    WriterThread:31457 [datastore.py:close():296] close: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/run-97uyy6h0.wandb
+2024-01-21 06:45:14,211 INFO    SenderThread:31457 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-01-21 06:45:14,929 INFO    SenderThread:31457 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/output.log
+2024-01-21 06:45:14,930 INFO    SenderThread:31457 [dir_watcher.py:finish():388] scan: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files
+2024-01-21 06:45:14,930 INFO    SenderThread:31457 [dir_watcher.py:finish():402] scan save: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/config.yaml config.yaml
+2024-01-21 06:45:14,930 INFO    SenderThread:31457 [dir_watcher.py:finish():402] scan save: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/wandb-metadata.json wandb-metadata.json
+2024-01-21 06:45:14,930 INFO    SenderThread:31457 [dir_watcher.py:finish():402] scan save: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/requirements.txt requirements.txt
+2024-01-21 06:45:14,930 INFO    SenderThread:31457 [dir_watcher.py:finish():402] scan save: /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/output.log output.log
+2024-01-21 06:45:14,931 INFO    SenderThread:31457 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-21 06:45:14,931 INFO    SenderThread:31457 [file_pusher.py:join():181] waiting for file pusher
+2024-01-21 06:45:15,472 INFO    wandb-upload_0:31457 [upload_job.py:push():131] Uploaded file /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/config.yaml
+2024-01-21 06:45:15,527 INFO    wandb-upload_2:31457 [upload_job.py:push():131] Uploaded file /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/output.log
+2024-01-21 06:45:15,533 INFO    wandb-upload_1:31457 [upload_job.py:push():131] Uploaded file /workspace/audiogen-finetune/wandb/run-20240121_064111-97uyy6h0/files/requirements.txt
+2024-01-21 06:45:15,534 INFO    MainThread:31457 [internal.py:handle_exit():76] Internal process exited
