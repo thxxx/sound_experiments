@@ -236,7 +236,9 @@ class LMModel(StreamingModule):
         """
         B, K, S = sequence.shape
         assert K == self.num_codebooks, "Sequence shape must match the specified number of codebooks"
-        input_ = sum([self.emb[k](sequence[:, k]) for k in range(K)])
+        
+        input_ = sum([self.emb[k](sequence[:, k]) for k in range(K)]) # I don't know what this means
+        
         if condition_tensors is None:
             assert not self._is_streaming, "Conditions tensors should be precomputed when streaming."
             # apply dropout modules
@@ -295,6 +297,8 @@ class LMModel(StreamingModule):
         # apply model on pattern sequence
         model = self if self._fsdp is None else self._fsdp
         logits = model(sequence_codes, conditions, condition_tensors)  # [B, K, S, card]
+        # 여기서 각각 다음 토큰을 예측해서 만들었다. 그러면 shape은? 1, 4, 301, 2048 이어야 할까? card는 뭐지
+        # print("logits : ", logits.shape)
         # map back the logits on pattern sequence to logits on original codes: [B, K, S, card] -> [B, K, T, card]
         # and provide the corresponding mask over invalid positions of tokens
         logits = logits.permute(0, 3, 1, 2)  # [B, card, K, S]
@@ -303,7 +307,13 @@ class LMModel(StreamingModule):
             logits, float('nan'), keep_only_valid_steps=True
         )
         logits = logits.permute(0, 2, 3, 1)  # [B, K, T, card]
+        # print("logtis mask. indexes. : ", logits.shape, "\n\n", logits_indexes.shape, "\n\n", logits_mask.shape)
+        # logits.shape : 3, 4, 300
+        # logits_indexes.shape : 4, 300
+        # logits_mask.shape : 4, 300
+        
         logits_mask = logits_mask[None, :, :].expand(B, -1, -1)  # [K, T] -> [B, K, T]
+        # print("logits_mask : ", logits_mask)
         return LMOutput(logits, logits_mask)
 
     def _sample_next_token(self,

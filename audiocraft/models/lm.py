@@ -297,6 +297,8 @@ class LMModel(StreamingModule):
         # apply model on pattern sequence
         model = self if self._fsdp is None else self._fsdp
         logits = model(sequence_codes, conditions, condition_tensors)  # [B, K, S, card]
+        # 여기서 각각 다음 토큰을 예측해서 만들었다. 그러면 shape은? 1, 4, 301, 2048 이어야 할까? card는 뭐지
+        # print("logits : ", logits.shape)
         # map back the logits on pattern sequence to logits on original codes: [B, K, S, card] -> [B, K, T, card]
         # and provide the corresponding mask over invalid positions of tokens
         logits = logits.permute(0, 3, 1, 2)  # [B, card, K, S]
@@ -305,7 +307,13 @@ class LMModel(StreamingModule):
             logits, float('nan'), keep_only_valid_steps=True
         )
         logits = logits.permute(0, 2, 3, 1)  # [B, K, T, card]
+        # print("logtis mask. indexes. : ", logits.shape, "\n\n", logits_indexes.shape, "\n\n", logits_mask.shape)
+        # logits.shape : 3, 4, 300
+        # logits_indexes.shape : 4, 300
+        # logits_mask.shape : 4, 300
+        
         logits_mask = logits_mask[None, :, :].expand(B, -1, -1)  # [K, T] -> [B, K, T]
+        # print("logits_mask : ", logits_mask)
         return LMOutput(logits, logits_mask)
 
     def _sample_next_token(self,
@@ -494,10 +502,12 @@ class LMModel(StreamingModule):
                     assert (curr_sequence == torch.where(curr_mask, curr_sequence, self.special_token_id)).all()
                     # should never happen as gen_sequence is filled progressively
                     assert not (curr_sequence == unknown_token).any()
+                
                 # sample next token from the model, next token shape is [B, K, 1]
                 next_token = self._sample_next_token(
                     curr_sequence, cfg_conditions, unconditional_state, use_sampling, temp, top_k, top_p,
                     cfg_coef=cfg_coef, two_step_cfg=two_step_cfg)
+                
                 # ensure the tokens that should be masked are properly set to special_token_id
                 # as the model never output special_token_id
                 valid_mask = mask[..., offset:offset+1].expand(B, -1, -1)

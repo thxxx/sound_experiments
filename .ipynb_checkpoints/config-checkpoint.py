@@ -66,7 +66,7 @@ class Config:
         self.save_steps = 20
         self.resume_from_checkpoint = "./output_dir_finetune/best.pth"
         self.resume_epoch = 0 
-        self.wandb_project_name = "seperation_first"
+        self.wandb_project_name = "audiogen-finetune-init-test1"
         self.wandb_id = None 
             
     def update_audiocraft_config(self):

@@ -1,0 +1,4 @@
+sep_models
+output_dir_finetune
+test
+wandb

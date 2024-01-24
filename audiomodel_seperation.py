@@ -82,14 +82,24 @@ class AudioProcessing(nn.Module):
 
         return gen_tokens, gen_audio
 
-    def inference(self, descriptions, compression_model):
+    def inference(self, initial_tokens, descriptions, compression_model):
         with torch.no_grad():
+            total_gen_len = math.ceil(self.cfg.duration * compression_model.frame_rate)
+            print("initial_tokens : ", initial_tokens.shape)
+            
             attributes = [
                 ConditioningAttributes(text={'description': description})
                 for description in descriptions
             ]
-            gen_tokens, gen_audio = self.audio_generate(attributes, gen_duration=self.cfg.duration, compression_model=compression_model)
-            
+            gen_tokens = self.lm.generate(
+                # initial_tokens,
+                None, 
+                attributes, 
+                max_gen_len=total_gen_len,
+                num_samples=1
+            )
+            gen_audio = compression_model.decode(gen_tokens, None)
+        
         return gen_tokens, gen_audio
 
     def save_audio(self, gen_audio, audio_filename, cfg):

@@ -22,8 +22,8 @@ class AudioProcessing(nn.Module):
         model_output = self.lm.compute_predictions(audio_tokens, conditions=attributes, condition_tensors=None)  # type: ignore
         
         logits = model_output.logits
-        print("logits : ", logits)
-        print("model_output : ", model_output.mask.shape)
+        # print("logits : ", logits)
+        # print("model_output : ", model_output.mask.shape)
     
         mask = padding_mask & model_output.mask
         ce, ce_per_codebook = self.compute_cross_entropy(logits, audio_tokens, mask)
@@ -32,6 +32,23 @@ class AudioProcessing(nn.Module):
 
     
     def compute_cross_entropy(self, logits: torch.Tensor, targets: torch.Tensor, mask: torch.Tensor) -> tp.Tuple[torch.Tensor, tp.List[torch.Tensor]]:
+        """Compute cross entropy between multi-codebook targets and model's logits.
+        The cross entropy is computed per codebook to provide codebook-level cross entropy.
+        Valid timesteps for each of the codebook are pulled from the mask, where invalid
+        timesteps are set to 0.
+
+        Args:
+            logits (torch.Tensor): Model's logits of shape [B, K, T, card].
+            targets (torch.Tensor): Target codes, of shape [B, K, T].
+            mask (torch.Tensor): Mask for valid target codes, of shape [B, K, T].
+        Returns:
+            ce (torch.Tensor): Cross entropy averaged over the codebooks
+            ce_per_codebook (list of torch.Tensor): Cross entropy per codebook (detached).
+        """
+        
+        # print("targets.shape : ", targets.shape)
+        # print("logits.shape : ", logits.shape)
+        # print("mask.shape : ", mask.shape)
 
         B, K, T = targets.shape
         assert logits.shape[:-1] == targets.shape
@@ -42,8 +59,12 @@ class AudioProcessing(nn.Module):
             logits_k = logits[:, k, ...].contiguous().view(-1, logits.size(-1))  # [B x T, card]
             targets_k = targets[:, k, ...].contiguous().view(-1)  # [B x T]
             mask_k = mask[:, k, ...].contiguous().view(-1)  # [B x T]
+            # print("logits_k : ", logits_k, logits_k.shape)
+            # print("targets_k : ", targets_k, targets_k.shape)
             ce_targets = targets_k[mask_k]
             ce_logits = logits_k[mask_k]
+            # print("ce logits : ", ce_logits, ce_logits.shape)
+            # print("ce_targets : ", ce_targets, ce_targets.shape)
             q_ce = F.cross_entropy(ce_logits, ce_targets)
             ce += q_ce
             ce_per_codebook.append(q_ce.detach())
@@ -64,8 +85,9 @@ class AudioProcessing(nn.Module):
     def inference(self, descriptions, compression_model):
         with torch.no_grad():
             attributes = [
-            ConditioningAttributes(text={'description': description})
-            for description in descriptions]
+                ConditioningAttributes(text={'description': description})
+                for description in descriptions
+            ]
             gen_tokens, gen_audio = self.audio_generate(attributes, gen_duration=self.cfg.duration, compression_model=compression_model)
             
         return gen_tokens, gen_audio

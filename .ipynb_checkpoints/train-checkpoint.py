@@ -201,7 +201,6 @@ def main():
             unwrapped_model = accelerator.unwrap_model(model)
             unwrapped_vae = accelerator.unwrap_model(compression_model)
             best_loss = save_checkpoint(cfg, unwrapped_model, result, best_loss, save_epoch)
-            
             for test_step, batch in enumerate(test_dataloader):
                 gen_token, gen_audio = unwrapped_model.inference(batch, unwrapped_vae)
                 audio_filename = f"epoch_{save_epoch}_{test_step}.wav"

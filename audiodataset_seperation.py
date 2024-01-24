@@ -21,7 +21,13 @@ class SeperationDataset(Dataset):
         self.df = pd.read_csv(self.audio_paths)
 
     def __len__(self):
-        return len(self.df)
+        lens=0
+        if self.train:
+            lens = len(self.df[:41200])
+        else:
+            lens = len(self.df[:4560])
+            
+        return lens
 
     def process_data(self, wav):
         # Encode audio signal as one long file
@@ -33,7 +39,7 @@ class SeperationDataset(Dataset):
 
             random_integer = random.randint(0, pad_len-1)
             zero_wavs = np.zeros((1,1,48000))
-            zero_wavs[:,:,random_integer:random_integer+wav.signal_length] = wav.numpy().squeeze()
+            zero_wavs[:,:,:wav.signal_length] = wav.numpy().squeeze()
             wav = AudioSignal(zero_wavs, sample_rate=16000)
             # wav.zero_pad(0, pad_len)
         elif wav.duration > self.duration:
@@ -48,17 +54,19 @@ class SeperationDataset(Dataset):
 
         # Load audio signal file
         wav = AudioSignal(audio_path)
-        length = wav.signal_length
-        wav = self.process_data(wav)
 
         # 두번째 데이터
         # Load second audio signal file for combining
-        data = self.df.iloc[synthesized_index] # self.audio_files_list[idx]
+        data = self.df.iloc[synthesized_index-1] # self.audio_files_list[idx]
         audio_path, description2 = data['audio_path'], data['caption']
 
         wav2 = AudioSignal(audio_path)
+        length = wav.signal_length
+        length2 = wav2.signal_length
+        wav = self.process_data(wav)
         wav2 = self.process_data(wav2)
 
+        # combine
         synthesized_audio = AudioSignal(wav.numpy() + wav2.numpy(), sample_rate=16000)
 
         prompt = f"Remove '{description2}'"
