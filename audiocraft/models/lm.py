@@ -297,7 +297,7 @@ class LMModel(StreamingModule):
         # apply model on pattern sequence
         model = self if self._fsdp is None else self._fsdp
         logits = model(sequence_codes, conditions, condition_tensors)  # [B, K, S, card]
-        # 여기서 각각 다음 토큰을 예측해서 만들었다. 그러면 shape은? 1, 4, 301, 2048 이어야 할까? card는 뭐지
+        # 여기서 각각 다음 토큰을 예측해서 만들었다. 그러면 shape은? 1, 4, 301, 2048 이어야 할까? card는 뭐지. logits이기 때문에 특정 index일 확률이기 때문에. 
         # print("logits : ", logits.shape)
         # map back the logits on pattern sequence to logits on original codes: [B, K, S, card] -> [B, K, T, card]
         # and provide the corresponding mask over invalid positions of tokens

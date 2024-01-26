@@ -45,7 +45,7 @@ class Config:
     def update_hyperparameter_config(self):
         self.batch_size = 3
         self.eval_batch_size = 4
-        self.learning_rate = 3e-6
+        self.learning_rate = 1e-5
         self.adam_beta1 = 0.9
         self.adam_beta2 = 0.999
         self.adam_weight_decay = 1e-2

@@ -4,6 +4,7 @@ from torch.utils.data import Dataset, DataLoader
 import random
 import numpy as np
 import torch
+import re
 
 class SeperationDataset(Dataset):
     def __init__(self, cfg, train=True):
@@ -69,7 +70,8 @@ class SeperationDataset(Dataset):
         # combine
         synthesized_audio = AudioSignal(wav.numpy() + wav2.numpy(), sample_rate=16000)
 
-        prompt = f"Remove '{description2}'"
+        description2 = re.sub("The sound of ", "", description2)
+        prompt = f"Remove The sound of '{description2}'"
         ground_truth = wav
 
         # # or 

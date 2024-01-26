@@ -18,7 +18,8 @@ conditioners:
   description:
     model: t5
     t5:
-      name: t5-large
+      name: t5-large # original
+      # name: t5-3b
       finetune: false
       word_dropout: 0.
       normalize_text: false

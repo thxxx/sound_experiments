@@ -297,7 +297,7 @@ class LMModel(StreamingModule):
         # apply model on pattern sequence
         model = self if self._fsdp is None else self._fsdp
         logits = model(sequence_codes, conditions, condition_tensors)  # [B, K, S, card]
-        # 여기서 각각 다음 토큰을 예측해서 만들었다. 그러면 shape은? 1, 4, 301, 2048 이어야 할까? card는 뭐지
+        # 여기서 각각 다음 토큰을 예측해서 만들었다. 그러면 shape은? 1, 4, 301, 2048 이어야 할까? card는 뭐지. logits이기 때문에 특정 index
         # print("logits : ", logits.shape)
         # map back the logits on pattern sequence to logits on original codes: [B, K, S, card] -> [B, K, T, card]
         # and provide the corresponding mask over invalid positions of tokens
@@ -502,10 +502,12 @@ class LMModel(StreamingModule):
                     assert (curr_sequence == torch.where(curr_mask, curr_sequence, self.special_token_id)).all()
                     # should never happen as gen_sequence is filled progressively
                     assert not (curr_sequence == unknown_token).any()
+                
                 # sample next token from the model, next token shape is [B, K, 1]
                 next_token = self._sample_next_token(
                     curr_sequence, cfg_conditions, unconditional_state, use_sampling, temp, top_k, top_p,
                     cfg_coef=cfg_coef, two_step_cfg=two_step_cfg)
+                
                 # ensure the tokens that should be masked are properly set to special_token_id
                 # as the model never output special_token_id
                 valid_mask = mask[..., offset:offset+1].expand(B, -1, -1)

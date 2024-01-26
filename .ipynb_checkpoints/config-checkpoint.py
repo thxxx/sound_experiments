@@ -45,7 +45,7 @@ class Config:
     def update_hyperparameter_config(self):
         self.batch_size = 3
         self.eval_batch_size = 4
-        self.learning_rate = 3e-6
+        self.learning_rate = 1e-5
         self.adam_beta1 = 0.9
         self.adam_beta2 = 0.999
         self.adam_weight_decay = 1e-2
@@ -66,7 +66,7 @@ class Config:
         self.save_steps = 20
         self.resume_from_checkpoint = "./output_dir_finetune/best.pth"
         self.resume_epoch = 0 
-        self.wandb_project_name = "audiogen-finetune-init-test1"
+        self.wandb_project_name = "seperation_first"
         self.wandb_id = None 
             
     def update_audiocraft_config(self):
